@@ -10,15 +10,13 @@
 def multiplication_chain(num):
     count_multy = 0
 
-    if len(str(num)) == 0:
+    if len(str(num)) == 1:
         count_multy
     else:
-        while len(str(num)) > 1:
-            for i in str(num):
-                i *= (str(num))[i]
-                count_multy += 1
-
-        return count_multy
+        count = 0
+        for i in range(len(str(num))):
+            
+    return count_multy
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
