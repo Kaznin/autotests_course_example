@@ -13,17 +13,26 @@
 
 def max_division_by_3(num):
 
+    main_list = [j for j in str(num)]
+
     razryadnost = len(str(num))
-    new_list = []
 
     max_value = int(razryadnost * '9')
 
     while max_value > num:
         max_value -= 1
         if max_value % 3 == 0:
-            if
+            new_list = [i for i in str(max_value)]
 
-    new_num = max_value
+            list_difference = []
+            for element in new_list:
+                if element not in main_list:
+                    list_difference.append(element)
+
+                    if len(list_difference) > 1:
+                        continue
+                    else:
+                        new_num = max_value
 
     return new_num
 
