@@ -7,7 +7,19 @@
 
 
 def repeats(our_str):
-    # Здесь нужно написать код
+    new_list = []
+    new_dict = {}
+
+    for i in our_str:
+        if i not in new_dict:
+            new_dict[i] = 1
+        else:
+            new_dict[i] += 1
+
+        new_list.append(f'{i}_{new_dict[i]}')
+
+    new_str = ''.join(new_list)
+
     return new_str
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
