@@ -19,7 +19,15 @@
 
 
 def everything_for_your_cat(cats_data):
-    for i in cats_data:
+
+    new_dict = {}
+
+    for cat in cats_data:
+        temp = cat[0] + ', ' + str(cat[1])
+        new_dict.setdefault(cat[2:], []).append(temp)
+
+    for k, v in new_dict.items():
+        our_str = f"{' '.join(k) + ':', '; '.join(v)}"
 
     return our_str
 
